@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import Image from "next/image";
 import Technologies from "./Technologies";
 
@@ -22,11 +23,9 @@ export default function HeroSection() {
             </button>
           </div>
         </div>
-        <Image
+        <img
           src="/images/myEmoji.png"
           alt="my avatar"
-          width={650}
-          height={650}
           className="md:w-5/12 w-full object-contain object-bottom md:object-left-bottom  md:pt-40 pt-6"
         />
       </div>
