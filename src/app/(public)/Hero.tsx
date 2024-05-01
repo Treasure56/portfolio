@@ -24,9 +24,9 @@ export default function HeroSection() {
         </div>
         <Image
           src="/images/myEmoji.png"
-          alt=""
-          width={600}
-          height={600}
+          alt="my avatar"
+          width={650}
+          height={650}
           className="md:w-5/12 w-full object-contain object-bottom md:object-left-bottom  md:pt-40 pt-6"
         />
       </div>

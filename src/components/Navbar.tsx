@@ -19,7 +19,7 @@ export default function Navbar() {
     function handleScroll() {
       if (window.scrollY > 100) {
         if (!scrolled) setScrolled(true);
-      } else if (window.scrollY < 100 && scrolled) {
+      } else if (window.scrollY < 100) {
         setScrolled(false);
       }
     }
