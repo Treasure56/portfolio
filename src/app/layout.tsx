@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     siteName: "My Website",
     images: [
       {
-        url: "https://treasure56.vercel.app/banner.png",
+        url: "https://treasure56.vercel.app/images/banner.png",
       },
     ],
   },
