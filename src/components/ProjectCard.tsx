@@ -30,12 +30,22 @@ export default function ProjectCard({
       </div>
       <div className="flex gap-4 p-3 md:absolute left-0 bottom-5 md:w-3/12">
         {live && (
-          <a href={live} className="text-3xl text-black border" target="_blank">
+          <a
+            href={live}
+            className="text-3xl text-black border"
+            target="_blank"
+            aria-label={`view ${title} live`}
+          >
             <FaLink />
           </a>
         )}
         {github && (
-          <a href={github} className="text-3xl text-black" target="_blank">
+          <a
+            href={github}
+            className="text-3xl text-black"
+            target="_blank"
+            aria-label={`view ${title} on github`}
+          >
             <FaGithub />
           </a>
         )}

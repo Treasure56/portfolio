@@ -17,7 +17,9 @@ export default function ContactPage() {
             key={index}
             href={social.link}
             className=" border p-2 rounded-full"
-            target=""
+            target="_blank"
+            aria-label={`contact me on ${social.title}`}
+            title={`contact me on ${social.title}`}
           >
             {social.icon}
           </a>
@@ -29,22 +31,27 @@ export default function ContactPage() {
 
 const socials = [
   {
+    title: "Github",
     icon: <FaGithub />,
     link: "https://helloworld",
   },
   {
+    title: "LinkedinIn",
     icon: <FaLinkedinIn />,
     link: "https://helloworld",
   },
   {
+    title: "Facebook",
     icon: <FaFacebook />,
     link: "https://helloworld",
   },
   {
+    title: "X",
     icon: <FaXTwitter />,
     link: "https://helloworld",
   },
   {
+    title: "Email",
     icon: <FaEnvelope />,
     link: "simplicitytreasure@gmail.com",
   },
