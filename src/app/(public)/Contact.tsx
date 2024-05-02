@@ -9,7 +9,10 @@ import {
 
 export default function ContactPage() {
   return (
-    <div className="flex flex-col gap-4 justify-center app-container py-6">
+    <div
+      className="flex flex-col gap-4 justify-center app-container py-6"
+      id="Contact"
+    >
       <h1 className="text-center text-2xl font-bold ">Contact Me</h1>
       <div className="flex justify-center items-center gap-4 text-3xl">
         {socials.map((social, index) => (

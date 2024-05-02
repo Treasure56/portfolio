@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function About() {
   return (
-    <div className="app-container py-6 grid md:grid-cols-10">
+    <div className="app-container py-6 grid md:grid-cols-10" id="About">
       <Image
         src="/images/about-img.webp"
         alt=""
@@ -14,14 +14,16 @@ export default function About() {
       <div className="flex flex-col justify-center gap-3 col-span-6 [&_p]:opacity-80">
         <h1 className="text-2xl">About Me</h1>
         <p>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nobis eaque
-          nesciunt at tempora ratione mollitia eius dolor rerum error quod
-          perspiciatis, voluptatibus eos, omnis ipsam earum reprehenderit sunt,
+          I&apos;m a frontend developer skilled in TypeScript, React, Next.js,
+          and Tailwind CSS. I love creating user-friendly websites and apps.
+          TypeScript helps me write cleaner code, React builds interactive
+          interfaces, Next.js makes apps fast, and Tailwind CSS ensures sleek
+          designs. I face challenges but always strive to learn and grow.
           <br /> <br />
-          explicabo distinctio. Lorem ipsum dolor sit amet consectetur
-          adipisicing elit. Sit nesciunt, facilis ullam consectetur delectus
-          illum hic, quam eveniet placeat quia possimus dolor ratione tempora
-          perferendis in doloribus voluptas at perspiciatis?
+          My goal is to innovate and collaborate, making the web better for
+          everyone. With each project, I refine my skills and push boundaries. I
+          believe in the power of technology to connect people and enhance
+          experiences. Join me on this exciting journey of digital exploration!
         </p>
         {skills.map((skill) => (
           <div key={skill} className="flex gap-2">

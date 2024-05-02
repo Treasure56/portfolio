@@ -5,7 +5,11 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 const title = " Simplicity Treasure C. | Frontend Developer";
-const description = "I am a highly skilled, creative developer";
+const description = `I'm a frontend developer skilled in TypeScript, React, Next.js,
+and Tailwind CSS. I love creating user-friendly websites and apps.
+TypeScript helps me write cleaner code, React builds interactive
+interfaces, Next.js makes apps fast, and Tailwind CSS ensures sleek
+designs. I face challenges but always strive to learn and grow.`;
 export const metadata: Metadata = {
   title,
   description,
@@ -29,8 +33,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={`bg-light text-dark ${inter.className}`}>
+    <html lang="en" className="scroll-smooth">
+      <body className={`bg-light text-dark scroll-smooth ${inter.className}`}>
         {children}
       </body>
     </html>

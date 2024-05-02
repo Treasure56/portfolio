@@ -49,15 +49,15 @@ export default function Navbar() {
             <SheetHeader>
               <SheetDescription>
                 <div className="flex gap-4 flex-col ">
-                  <Link href="/" className="">
-                    About
-                  </Link>
-                  <Link href="/" className="">
-                    Projects
-                  </Link>
-                  <Link href="/" className="">
-                    Contact
-                  </Link>
+                  {navLinks.map((navlink) => (
+                    <Link
+                      key={navlink.name}
+                      href={navlink.href}
+                      className="nav-link"
+                    >
+                      {navlink.name}
+                    </Link>
+                  ))}
                 </div>
               </SheetDescription>
             </SheetHeader>
@@ -65,16 +65,27 @@ export default function Navbar() {
         </Sheet>
       </>
       <div className="flex gap-4 max-md:hidden">
-        <Link href="/" className="nav-link">
-          About
-        </Link>
-        <Link href="/" className="nav-link">
-          Projects
-        </Link>
-        <Link href="/" className="nav-link">
-          Contact
-        </Link>
+        {navLinks.map((navlink) => (
+          <Link key={navlink.name} href={navlink.href} className="nav-link">
+            {navlink.name}
+          </Link>
+        ))}
       </div>
     </div>
   );
 }
+
+const navLinks = [
+  {
+    name: "About",
+    href: "/#About",
+  },
+  {
+    name: "Projects",
+    href: "/#Projects",
+  },
+  {
+    name: "Contact",
+    href: "/#Contact",
+  },
+];
