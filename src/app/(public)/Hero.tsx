@@ -28,6 +28,7 @@ export default function HeroSection() {
           width={650}
           height={650}
           className="md:w-5/12 w-full object-contain object-bottom md:object-left-bottom  md:pt-40 pt-6"
+          priority
         />
       </div>
     </section>

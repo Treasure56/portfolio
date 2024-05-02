@@ -7,8 +7,8 @@ export default function About() {
       <Image
         src="/images/about-img.webp"
         alt=""
-        width={600}
-        height={600}
+        width={400}
+        height={350}
         className=" w-full col-span-4 "
       />
       <div className="flex flex-col justify-center gap-3 col-span-6 [&_p]:opacity-80">

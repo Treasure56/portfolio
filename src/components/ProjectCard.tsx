@@ -20,8 +20,8 @@ export default function ProjectCard({
       <Image
         src={img}
         alt=""
-        width={600}
-        height={600}
+        width={350}
+        height={350}
         className=" col-span-8 relative md:w-10/12 h-60 object-cover rounded-lg shadow md:group-hover:shadow-lg md:group-hover:z-10"
       />
       <div className="border col-span-3 bg-[#ffffffbb] backdrop-blur-sm md:absolute shadow z-10 bottom-0 right-0 md:w-8/12 rounded p-4 group-hover:z-0">

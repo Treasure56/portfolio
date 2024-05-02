@@ -38,7 +38,11 @@ export default function Navbar() {
       </Link>
       <>
         <Sheet>
-          <SheetTrigger className="md:hidden" name="show sidebar">
+          <SheetTrigger
+            className="md:hidden"
+            title="show sidebar"
+            aria-label="show sidebar"
+          >
             <FaBars />
           </SheetTrigger>
           <SheetContent>
