@@ -34,7 +34,7 @@ export default function Navbar() {
       }`}
     >
       <Link href="" className="font-bold text-md">
-        hello
+        TS
       </Link>
       <>
         <Sheet>
