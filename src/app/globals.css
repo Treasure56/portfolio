@@ -26,6 +26,9 @@
   .nav-link {
     @apply hover:text-primary relative;
   }
+  .form-input {
+    @apply border border-dark rounded-md w-full p-4;
+  }
 }
 
 .nav-link::before {

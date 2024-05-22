@@ -1,5 +1,6 @@
 import { Sofia_Sans_Condensed } from "next/font/google";
 import {
+  FaBaby,
   FaEnvelope,
   FaFacebook,
   FaGithub,
@@ -36,7 +37,7 @@ const socials = [
   {
     title: "Github",
     icon: <FaGithub />,
-    link: "https://helloworld",
+    link: "https://github.com/treasure56",
   },
   {
     title: "LinkedinIn",
@@ -46,12 +47,12 @@ const socials = [
   {
     title: "Facebook",
     icon: <FaFacebook />,
-    link: "https://helloworld",
+    link: "https://facebook.com/treasuremark",
   },
   {
     title: "X",
     icon: <FaXTwitter />,
-    link: "https://helloworld",
+    link: "https://x.com/simplicitytrea1",
   },
   {
     title: "Email",

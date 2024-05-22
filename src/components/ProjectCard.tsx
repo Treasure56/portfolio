@@ -1,3 +1,4 @@
+import { supabaseImage } from "@/utils/supabase";
 import Image from "next/image";
 import { FaGithub, FaLink } from "react-icons/fa6";
 
@@ -5,8 +6,8 @@ export type ProjectCardProps = {
   img: string;
   title: string;
   content: string;
-  live?: string;
-  github?: string;
+  live?: string | null;
+  github?: string | null;
 };
 export default function ProjectCard({
   img,
@@ -18,7 +19,7 @@ export default function ProjectCard({
   return (
     <div className="relative md:pb-20 md:pr-10 group animate-all">
       <Image
-        src={img}
+        src={supabaseImage(img)}
         alt=""
         width={350}
         height={350}
