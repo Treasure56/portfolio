@@ -1,3 +1,3 @@
 git add .
-git commit -m "completed: backend"
+git commit -m "Added: cron job"
 git push origin main
