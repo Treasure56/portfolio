@@ -5,6 +5,7 @@ import About from "./About";
 import Project from "./Project";
 import Contact from "./Contact";
 
+export const dynamic = "force-dynamic";
 export default function Home() {
   return (
     <>
