@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import Technologies from "./Technologies";
 
 export default function HeroSection() {
@@ -14,12 +15,16 @@ export default function HeroSection() {
             Web Developer / Fontend Engineer
           </p>
           <div className="flex gap-3">
-            <button className="btn-primary font-semibold w-fit py-3 px-10 shadow-lg">
+            <Link
+            href="#Contact"
+             className="btn-primary font-semibold w-fit py-3 px-10 shadow-lg">
               Contact
-            </button>
-            <button className="btn-primary-border font-semibold w-fit py-3 px-10 shadow-lg">
+            </Link>
+            <Link
+            href="https://wa.me/2349039418922"
+             className="btn-primary-border font-semibold w-fit py-3 px-10 shadow-lg">
               hire Me
-            </button>
+            </Link>
           </div>
         </div>
         <Image
