@@ -1,3 +1,3 @@
 git add .
-git commit -m "Added: cron job"
+git commit -m "updated contents"
 git push origin main

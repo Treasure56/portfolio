@@ -1,16 +1,15 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import {  Roboto, Lilita_One } from "next/font/google";
 import "./globals.css";
 import connectDB from "@/server/connection";
 
-const inter = Inter({ subsets: ["latin"] });
+const roboto = Roboto({ weight:["400", "500", "700"], subsets: ["latin"] });
+const lilita = Lilita_One({ weight:["400"], subsets: ["latin"], variable: "--font-lilita" });
 
-const title = " Simplicity Treasure C. | Frontend Developer";
-const description = `I'm a frontend developer skilled in TypeScript, React, Next.js,
-and Tailwind CSS. I love creating user-friendly websites and apps.
-TypeScript helps me write cleaner code, React builds interactive
-interfaces, Next.js makes apps fast, and Tailwind CSS ensures sleek
-designs. I face challenges but always strive to learn and grow.`;
+const title = "Simplicity Treasure C. | Web & Mobile Developer";
+const description =
+  "Frontend developer building sleek web and mobile apps with TypeScript, React, Next.js, Tailwind CSS, and React Native.";
+
 export const metadata: Metadata = {
   title,
   description,
@@ -35,7 +34,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="scroll-smooth">
-      <body className={`bg-light text-dark scroll-smooth ${inter.className}`}>
+      <body className={`bg-light text-dark scroll-smooth ${roboto.className} ${lilita.variable}`}>
         {children}
       </body>
     </html>

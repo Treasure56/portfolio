@@ -12,18 +12,22 @@ export default function About() {
         className=" w-full col-span-4 "
       />
       <div className="flex flex-col justify-center gap-3 col-span-6 [&_p]:opacity-80">
-        <h1 className="text-2xl">About Me</h1>
+        <h1 className="text-2xl font-lilita">About Me</h1>
         <p>
-          I&apos;m a frontend developer skilled in TypeScript, React, Next.js,
-          and Tailwind CSS. I love creating user-friendly websites and apps.
-          TypeScript helps me write cleaner code, React builds interactive
-          interfaces, Next.js makes apps fast, and Tailwind CSS ensures sleek
-          designs. I face challenges but always strive to learn and grow.
-          <br /> <br />
-          My goal is to innovate and collaborate, making the web better for
-          everyone. With each project, I refine my skills and push boundaries. I
-          believe in the power of technology to connect people and enhance
-          experiences. Join me on this exciting journey of digital exploration!
+          {" "}
+          I&apos;m a frontend web and mobile app developer who&apos;s passionate about
+          building fast, intuitive, and accessible digital products. I work
+          primarily with TypeScript, Next.js, and Tailwind CSS for the web, and
+          use React Native to craft high-quality mobile experiences. <br />
+          <br /> I care deeply about user experience and code quality, every
+          project is an opportunity to solve real problems through clean,
+          scalable solutions. Whether it&apos;s a responsive website or a
+          cross-platform mobile app, I aim to create products that feel
+          effortless to use. <br />
+          <br /> Beyond the code, I&apos;m driven by a desire to keep learning,
+          collaborate with others, and push the boundaries of what&apos;s possible in
+          tech. I believe that great software has the power to connect people,
+          simplify life, and make a meaningful impact.{" "}
         </p>
         {skills.map((skill) => (
           <div key={skill} className="flex gap-2">

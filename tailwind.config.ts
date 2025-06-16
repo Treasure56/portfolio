@@ -18,6 +18,9 @@ const config = {
       },
     },
     extend: {
+      fontFamily: {
+        lilita: ["var(--font-lilita)", "sans-serif"],
+      },
       colors: {
         // primary: "var(--primary)",
         // secondary: "var(--secondary)",

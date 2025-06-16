@@ -10,7 +10,7 @@ export default async function Project() {
   console.log(projects);
   return (
     <section className="py-20 bg-slate-100" id="Projects">
-      <h1 className="text-center text-2xl font-bold"> My Projects</h1>
+      <h1 className="text-center text-2xl md:text-5xl font-bold font-lilita"> My Projects</h1>
       <p className="text-center opacity-80">
         inspiring projects i have worked on
       </p>
