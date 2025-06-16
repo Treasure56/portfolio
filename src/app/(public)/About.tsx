@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function About() {
   return (
-    <div className="app-container py-6 grid md:grid-cols-10" id="About">
+    <div className="app-container py-12 grid md:grid-cols-10" id="About">
       <Image
         src="/images/about-img.webp"
         alt=""
