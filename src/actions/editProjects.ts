@@ -39,7 +39,7 @@ export async function editProject(
 
     let _data: any;
     const fileName = (file as File).name.split(".");
-    console.log(file);
+    // console.log(file);
 
     if (file && (file as File).size > 0) {
       const { data, error } = await supabase.storage

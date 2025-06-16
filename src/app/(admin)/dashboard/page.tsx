@@ -8,7 +8,7 @@ export default async function Page() {
   if (!projects) {
     return <div>an error occured</div>;
   }
-  console.log(projects);
+  // console.log(projects);
 
   return (
     <div className="app-container py-6">

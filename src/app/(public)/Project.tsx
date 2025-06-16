@@ -7,7 +7,7 @@ export default async function Project() {
   if (!projects) {
     return <div>an error occured</div>;
   }
-  console.log(projects);
+  // console.log(projects);
   return (
     <section className="py-20 bg-slate-100" id="Projects">
       <h1 className="text-center text-2xl md:text-5xl font-bold font-lilita"> My Projects</h1>
