@@ -24,8 +24,8 @@ export default function ProjectCard({
       <Image
         src={supabaseImage(img)}
         alt=""
-        width={350}
-        height={350}
+        width={700}
+        height={600}
         className=" col-span-8 w-full object-cover overflow-hidden"
       />
       <div className=" col-span-3 bg-[#ffffffbb]  p-4">
