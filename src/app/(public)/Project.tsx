@@ -15,7 +15,7 @@ export default async function Project() {
         inspiring projects i have worked on
       </p>
       <div className="app-container grid md:grid-cols-2 gap-10 py-6 relative">
-        {projects.map((project) => (
+        {projects.toReversed().map((project) => (
           <ProjectCard key={project._id.toString()} {...project} />
         ))}
       </div>
