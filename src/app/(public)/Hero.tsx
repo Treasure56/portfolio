@@ -16,15 +16,15 @@ export default function HeroSection() {
           </p>
           <div className="flex gap-3">
             <Link
-            href="#Contact"
+            href="https://wa.me/2349039418922"
              className="btn-primary font-semibold w-fit py-3 px-10 shadow-lg">
               Contact
             </Link>
-            <Link
-            href="https://wa.me/2349039418922"
+            <a target="_blank" download={true}
+            href="/images/my-cv.pdf"
              className="btn-primary-border font-semibold w-fit py-3 px-10 shadow-lg">
-              hire Me
-            </Link>
+              My Resume
+            </a>
           </div>
         </div>
         <Image
