@@ -37,4 +37,5 @@ const skills = [
   "Web Development",
   "Critical Thinking",
   "Team Work",
+  "Mobile App Development",
 ];
