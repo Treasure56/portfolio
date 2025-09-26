@@ -14,20 +14,12 @@ export default function About() {
       <div className="flex flex-col justify-center gap-3 col-span-6 [&_p]:opacity-80">
         <h1 className="text-2xl font-lilita">About Me</h1>
         <p>
-          {" "}
-          I&apos;m a frontend web and mobile app developer who&apos;s passionate about
-          building fast, intuitive, and accessible digital products. I work
-          primarily with TypeScript, Next.js, and Tailwind CSS for the web, and
-          use React Native to craft high-quality mobile experiences. <br />
-          <br /> I care deeply about user experience and code quality, every
-          project is an opportunity to solve real problems through clean,
-          scalable solutions. Whether it&apos;s a responsive website or a
-          cross-platform mobile app, I aim to create products that feel
-          effortless to use. <br />
-          <br /> Beyond the code, I&apos;m driven by a desire to keep learning,
-          collaborate with others, and push the boundaries of what&apos;s possible in
-          tech. I believe that great software has the power to connect people,
-          simplify life, and make a meaningful impact.{" "}
+          I&apos;m a frontend web and mobile developer passionate about building
+          fast, intuitive, and accessible products. I work with TypeScript,
+          Next.js, Tailwind CSS, and React Native to create clean, scalable
+          solutions that focus on user experience. Beyond code, I love learning,
+          collaborating, and pushing boundaries to build software that truly
+          makes an impact
         </p>
         {skills.map((skill) => (
           <div key={skill} className="flex gap-2">
