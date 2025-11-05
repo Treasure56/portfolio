@@ -21,7 +21,7 @@ export default function HeroSection() {
               Contact
             </Link>
             <a target="_blank" download={true}
-            href="/images/my-cv.pdf"
+            href="/images/treasure_onyenze.pdf"
              className="btn-primary-border font-semibold w-fit py-3 px-10 shadow-lg">
               My Resume
             </a>
