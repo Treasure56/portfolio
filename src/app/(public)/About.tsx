@@ -14,12 +14,8 @@ export default function About() {
       <div className="flex flex-col justify-center gap-3 col-span-6 [&_p]:opacity-80">
         <h1 className="text-2xl font-lilita">About Me</h1>
         <p>
-          I&apos;m a frontend web and mobile developer passionate about building
-          fast, intuitive, and accessible products. I work with TypeScript,
-          Next.js, Tailwind CSS, and React Native to create clean, scalable
-          solutions that focus on user experience. Beyond code, I love learning,
-          collaborating, and pushing boundaries to build software that truly
-          makes an impact
+          I&apos;m a frontend web and mobile developer crafting premium digital
+          experiences with Next.js, React Native, and modern technologies.
         </p>
         {skills.map((skill) => (
           <div key={skill} className="flex gap-2">
