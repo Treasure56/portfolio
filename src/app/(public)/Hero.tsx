@@ -10,7 +10,7 @@ export default function HeroSection() {
       <div className=" max-md:flex-col flex bg-[#ffffffaa] backdrop-blur-[5px] app-container h-full w-full relative">
         <div className="flex flex-col max-md:items-center  md:h-full py-6 max-md:pt-20 justify-center flex-grow gap-2 w-full md:w-7/12">
           <p className="text-l font-bold">Hey there 👋, i&apos;m</p>
-          <h1 className=" md:text-6xl text-3xl font-lilita">Treasure Robinson</h1>
+          <h1 className=" md:text-6xl text-3xl font-lilita">Treasure Onyenze</h1>
           <p className="md:text-2xl text-xl font-semibold">
             Web / Mobile App Developer
           </p>
