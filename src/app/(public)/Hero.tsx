@@ -12,7 +12,7 @@ export default function HeroSection() {
           <p className="text-l font-bold">Hey there 👋, i&apos;m</p>
           <h1 className=" md:text-6xl text-3xl font-lilita">Treasure Onyenze</h1>
           <p className="md:text-2xl text-xl font-semibold">
-            Web / Mobile App Developer
+            Web / Mobile App Engineer
           </p>
           <div className="flex gap-3">
             <Link

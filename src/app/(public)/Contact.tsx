@@ -1,4 +1,3 @@
-import { Sofia_Sans_Condensed } from "next/font/google";
 import {
   FaBaby,
   FaEnvelope,
