@@ -45,6 +45,10 @@ const tech = [
     title: "React Native",
   },
   {
+    logo: "/images/expo.png",
+    title: "Expo",
+  },
+  {
     logo: "/images/git.png",
     title: "git",
   },
