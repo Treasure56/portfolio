@@ -14,7 +14,7 @@ export default function About() {
       <div className="flex flex-col justify-center gap-3 col-span-6 [&_p]:opacity-80">
         <h1 className="text-2xl font-lilita">About Me</h1>
         <p>
-          I&apos; a frontend web and mobile developer crafting premium digital
+          I&apos; a frontend web and mobile Engineer crafting premium digital
           experiences with Next.js, React Native, and modern technologies. I&apos;m
           passionate about building fast, intuitive, and accessible products
           that put user experience first. Using TypeScript, Tailwind CSS, and
