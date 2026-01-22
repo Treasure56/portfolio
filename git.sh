@@ -1,3 +1,3 @@
 git add .
-git commit -m "updated Technologies.tsx to include Expo logo and title"
+git commit -m "changed Expo logo"
 git push origin main

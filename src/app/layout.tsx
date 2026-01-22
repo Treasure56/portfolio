@@ -1,12 +1,16 @@
 import type { Metadata } from "next";
-import {  Roboto, Lilita_One } from "next/font/google";
+import { Roboto, Lilita_One } from "next/font/google";
 import "./globals.css";
 import connectDB from "@/server/connection";
 
-const roboto = Roboto({ weight:["400", "500", "700"], subsets: ["latin"] });
-const lilita = Lilita_One({ weight:["400"], subsets: ["latin"], variable: "--font-lilita" });
+const roboto = Roboto({ weight: ["400", "500", "700"], subsets: ["latin"] });
+const lilita = Lilita_One({
+  weight: ["400"],
+  subsets: ["latin"],
+  variable: "--font-lilita",
+});
 
-const title = "Simplicity Treasure C. | Web & Mobile Developer";
+const title = "Treasure Onyenze| Web & Mobile Engineer";
 const description =
   "Frontend developer building sleek web and mobile apps with TypeScript, React, Next.js, Tailwind CSS, and React Native.";
 
@@ -34,7 +38,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="scroll-smooth">
-      <body className={`bg-light text-dark scroll-smooth ${roboto.className} ${lilita.variable}`}>
+      <body
+        className={`bg-light text-dark scroll-smooth ${roboto.className} ${lilita.variable}`}
+      >
         {children}
       </body>
     </html>
