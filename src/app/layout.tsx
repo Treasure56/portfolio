@@ -17,6 +17,16 @@ const description =
 export const metadata: Metadata = {
   title,
   description,
+  keywords: [
+    "Treasure Onyenze",
+    "Onyenze Treasure",
+    "Treasure56",
+    "Treasure Onyenze Portfolio",
+    "Treasure Onyenze Frontend Engineer",
+    "web developer",
+    "mobile developer",
+    "frontend developer",
+  ],
   openGraph: {
     type: "website",
     url: "https://example.com",
