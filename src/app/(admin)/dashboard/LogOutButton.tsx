@@ -12,10 +12,10 @@ export default function LogOutButton() {
   return (
     <button
       onClick={_logOut}
-      className="inline-flex items-center justify-center px-4 py-2 bg-red-100 rounded-md border border-red-900 gap-2"
+      className="inline-flex items-center gap-2 px-3 py-1.5 rounded-md text-sm font-medium text-white/60 hover:text-red-400 hover:bg-red-500/10 border border-transparent hover:border-red-500/30 transition-all duration-200"
     >
-      <IoIosLogOut />
-      logout
+      <IoIosLogOut className="text-base" />
+      Logout
     </button>
   );
 }

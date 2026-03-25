@@ -14,20 +14,25 @@ export default function About() {
       <div className="flex flex-col justify-center gap-3 col-span-6 [&_p]:opacity-80">
         <h1 className="text-2xl font-lilita">About Me</h1>
         <p>
-          I&apos; a frontend web and mobile Engineer crafting premium digital
-          experiences with Next.js, React Native, and modern technologies. I&apos;m
-          passionate about building fast, intuitive, and accessible products
-          that put user experience first. Using TypeScript, Tailwind CSS, and
-          scalable design principles, I create clean, maintainable solutions.
-          Beyond code, I enjoy learning, collaborating, and pushing boundaries
-          to build software that makes a real impact
+          I&apos;m a Web & Mobile App Engineer based in Nigeria, with a strong
+          focus on user experience and clean, scalable code. I work with
+          founders and product teams to build web apps, mobile apps, and
+          AI-powered products — taking ideas from concept all the way to a live,
+          polished product. My approach: before I write a single line of code, I
+          think about the person using it. How do they navigate? Where do they
+          get frustrated? What makes them trust the product? That thinking shows
+          up in everything I build.
         </p>
-        {skills.map((skill) => (
-          <div key={skill} className="flex gap-2">
-            <FaCheck className="text-secondary rounded-full border p-1 text-xl  " />
-            <p className="text-sm">{skill}</p>
-          </div>
-        ))}
+        <div className="grid grid-cols-2 gap-y-4 gap-x-2 mt-2">
+          {skills.map((skill) => (
+            <div key={skill} className="flex items-center gap-3">
+              <div className="flex-shrink-0 bg-secondary/10 p-1.5 rounded-full">
+                <FaCheck className="text-secondary text-sm" />
+              </div>
+              <span className="text-sm font-medium text-gray-700">{skill}</span>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );

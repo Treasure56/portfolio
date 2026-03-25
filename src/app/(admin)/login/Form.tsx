@@ -1,6 +1,6 @@
 "use client";
 
-import { twMerge } from "tw-merge";
+import { twMerge } from "tailwind-merge";
 import { login } from "@/actions/login";
 import { useFormState, useFormStatus } from "react-dom";
 import { useState } from "react";
