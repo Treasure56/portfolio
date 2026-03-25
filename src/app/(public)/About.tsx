@@ -17,7 +17,7 @@ export default function About() {
           I&apos;m a Web & Mobile App Engineer based in Nigeria, with a strong
           focus on user experience and clean, scalable code. I work with
           founders and product teams to build web apps, mobile apps, and
-          AI-powered products — taking ideas from concept all the way to a live,
+          AI-powered products taking ideas from concept all the way to a live,
           polished product. My approach: before I write a single line of code, I
           think about the person using it. How do they navigate? Where do they
           get frustrated? What makes them trust the product? That thinking shows
