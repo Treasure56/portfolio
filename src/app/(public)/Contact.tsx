@@ -43,7 +43,7 @@ const socials = [
   {
     title: "LinkedinIn",
     icon: <FaLinkedinIn />,
-    link: "https://www.linkedin.com/treasure56",
+    link: "https://www.linkedin.com/in/treasure56",
   },
   {
     title: "Facebook",
