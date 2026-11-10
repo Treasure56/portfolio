@@ -1,20 +1,33 @@
 import type { Metadata } from "next";
-import { Roboto, Lilita_One } from "next/font/google";
+import { Caveat, DM_Sans, Lilita_One, Roboto, Young_Serif } from "next/font/google";
 import "./globals.css";
-import connectDB from "@/server/connection";
 
-const roboto = Roboto({ weight: ["400", "500", "700"], subsets: ["latin"] });
+// Dashboard and login fonts.
+const roboto = Roboto({
+  weight: ["400", "500", "700"],
+  subsets: ["latin"],
+  variable: "--font-roboto",
+  preload: false,
+});
 const lilita = Lilita_One({
   weight: ["400"],
   subsets: ["latin"],
   variable: "--font-lilita",
+  preload: false,
 });
 
-const title = "Treasure Onyenze| Web & Mobile Engineer";
+// Public site fonts: headings, body text and handwritten notes.
+const display = Young_Serif({ weight: "400", subsets: ["latin"], variable: "--font-display" });
+const body = DM_Sans({ subsets: ["latin"], variable: "--font-body" });
+const note = Caveat({ subsets: ["latin"], variable: "--font-note", preload: false });
+
+const siteUrl = "https://treasure56.vercel.app";
+const title = "Treasure Onyenze | Software Engineer & AI Creator";
 const description =
-  "Frontend developer building sleek web and mobile apps with TypeScript, React, Next.js, Tailwind CSS, and React Native.";
+  "I build web and mobile applications, integrate AI into digital products, and create AI-powered visual experiences that help businesses grow.";
 
 export const metadata: Metadata = {
+  metadataBase: new URL(siteUrl),
   title,
   description,
   keywords: [
@@ -22,20 +35,22 @@ export const metadata: Metadata = {
     "Onyenze Treasure",
     "Treasure56",
     "Treasure Onyenze Portfolio",
-    "Treasure Onyenze Frontend Engineer",
+    "software engineer",
     "web developer",
-    "mobile developer",
-    "frontend developer",
+    "mobile app developer",
+    "React Native developer",
+    "AI creator",
+    "AI integration",
   ],
   openGraph: {
     type: "website",
-    url: "https://example.com",
+    url: siteUrl,
     title,
     description,
-    siteName: "My Website",
+    siteName: "Treasure Onyenze",
     images: [
       {
-        url: "https://treasure56.vercel.app/images/banner.png",
+        url: `${siteUrl}/images/banner.png`,
       },
     ],
   },
@@ -49,7 +64,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <body
-        className={`bg-light text-dark scroll-smooth ${roboto.className} ${lilita.variable}`}
+        className={`bg-light text-dark antialiased ${roboto.className} ${roboto.variable} ${lilita.variable} ${display.variable} ${body.variable} ${note.variable}`}
       >
         {children}
       </body>

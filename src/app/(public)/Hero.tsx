@@ -1,50 +1,63 @@
 import Image from "next/image";
 import Link from "next/link";
-import Technologies from "./Technologies";
+import { PiArrowRight } from "react-icons/pi";
+import { cta, hero, owner } from "@/data/site";
+import Reveal from "@/components/Reveal";
 
-export default function HeroSection() {
+export default function Hero() {
   return (
-    <section className="md:h-[80vh] max-h-[700px] relative overflow-hidden bg-[url(/images/hero-bg.png)]">
-      <div className="absolute bg-primary rounded-full blur-[100px] size-[500px] -bottom-40 -right-40 "></div>
-      <div className="absolute bg-secondary rounded-full blur-[50px]  size-[500px]  -top-40 -left-40"></div>
-      <div className=" max-md:flex-col flex bg-[#ffffffaa] backdrop-blur-[5px] app-container h-full w-full relative">
-        <div className="flex flex-col max-md:items-center  md:h-full py-6 max-md:pt-20 justify-center flex-grow gap-2 w-full md:w-7/12">
-          <p className="text-l font-bold">Hey there 👋, I&apos;m</p>
-          <h1 className=" md:text-6xl text-3xl font-lilita">
-            Treasure Onyenze
-          </h1>
-          <p className="md:text-2xl text-xl font-semibold">
-            Web & Mobile App Engineer · AI Integration · UX-Focused
-          </p>
-          <p className="md:text-lg text-base font-semibold">
-            I build fast, beautiful apps that users love from fintech platforms
-            to AI-powered tools. Clean code. Thoughtful design. Real results
-          </p>
-          <div className="flex gap-3">
-            <Link
-              href="https://wa.me/2349039418922"
-              className="btn-primary font-semibold w-fit py-3 px-10 shadow-lg"
-            >
-              Contact
-            </Link>
-            <a
-              target="_blank"
-              download={true}
-              href="/images/treasure_onyenze.pdf"
-              className="btn-primary-border font-semibold w-fit py-3 px-10 shadow-lg"
-            >
-              My Resume
-            </a>
+    <section className="site-container grid items-center gap-14 py-12 md:min-h-[calc(100dvh-68px)] md:grid-cols-12 md:gap-12 md:py-14">
+      {/* Photo in a tilted frame with a handwritten note */}
+      <Reveal className="order-2 md:order-1 md:col-span-5">
+        <div className="relative mx-auto w-full max-w-[400px] md:mx-0">
+          <div className="pop -rotate-2 rounded-[1.75rem] bg-paper p-3 pb-14">
+            {/* The photo is a cut-out, so this colour is the backdrop behind you. */}
+            <div className="relative aspect-[4/5] overflow-hidden rounded-[1.1rem] bg-tint">
+              <Image
+                src={owner.photo}
+                alt={`Portrait of ${owner.name}`}
+                fill
+                priority
+                sizes="(min-width: 768px) 400px, 90vw"
+                className="object-cover object-bottom"
+              />
+            </div>
+            <p className="note absolute inset-x-0 bottom-3 text-center">{owner.name}</p>
           </div>
+          <p className="sticker absolute -right-2 -top-5 max-w-[13.5rem] rotate-3 !rounded-2xl !bg-tint text-left md:-right-10">
+            {hero.photoNote}
+          </p>
         </div>
-        <Image
-          src="/images/my-emoji.png"
-          alt="my avatar"
-          width={650}
-          height={650}
-          className="md:w-5/12 w-full object-contain object-bottom md:object-left-bottom  md:pt-40 pt-6"
-          priority
-        />
+      </Reveal>
+
+      <div className="order-1 md:order-2 md:col-span-7">
+        <Reveal>
+          <p className="text-lg font-semibold text-brand-text">
+            {owner.name}, {owner.title}
+          </p>
+          <h1 className="display mt-4 text-[clamp(2.3rem,4.5vw,3.9rem)]">
+            {hero.headline[0]} <span className="mark">{hero.headline[1]}</span>
+          </h1>
+        </Reveal>
+        <Reveal delay={0.1}>
+          <p className="mt-6 max-w-[52ch] text-lg leading-relaxed text-soft">{hero.intro}</p>
+          <ul className="mt-6 flex flex-wrap gap-2.5" aria-label="What I do">
+            {hero.tags.map((tag) => (
+              <li key={tag} className="sticker">
+                {tag}
+              </li>
+            ))}
+          </ul>
+        </Reveal>
+        <Reveal delay={0.2} className="mt-9 flex flex-wrap gap-4">
+          <Link href="/#Projects" className="btn-brand">
+            View my work
+            <PiArrowRight className="size-4" aria-hidden="true" />
+          </Link>
+          <Link href={cta.href} className="btn-outline">
+            {cta.label}
+          </Link>
+        </Reveal>
       </div>
     </section>
   );

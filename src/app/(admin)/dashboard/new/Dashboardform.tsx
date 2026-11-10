@@ -4,6 +4,7 @@ import { twMerge } from "tailwind-merge";
 import { createProject } from "@/actions/createProject";
 import { useFormState } from "react-dom";
 import FormButton from "@/components/FormButton";
+import ProjectExtraFields from "../ProjectExtraFields";
 
 export default function DashboardForm() {
   const [formState, action] = useFormState(createProject, {});
@@ -91,6 +92,8 @@ export default function DashboardForm() {
             className="form-input"
           />
         </div>
+
+        <ProjectExtraFields />
 
         <FormButton
           className={twMerge(

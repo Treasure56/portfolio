@@ -19,6 +19,24 @@ const projectSchema = new Schema({
   github: {
     type: String,
   },
+  // Optional extras shown on the public site. Existing projects work without them.
+  category: {
+    type: String,
+    enum: ["web", "mobile", "ai", "ai-video"],
+  },
+  tech: {
+    type: String,
+  },
+  video: {
+    type: String,
+  },
+  role: {
+    type: String,
+  },
+  featured: {
+    type: Boolean,
+    default: false,
+  },
 });
 
 const ProjectModel = connection

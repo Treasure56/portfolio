@@ -20,12 +20,29 @@ const config = {
     extend: {
       fontFamily: {
         lilita: ["var(--font-lilita)", "sans-serif"],
+        roboto: ["var(--font-roboto)", "sans-serif"],
+        display: ["var(--font-display)", "sans-serif"],
+        body: ["var(--font-body)", "sans-serif"],
+        note: ["var(--font-note)", "cursive"],
       },
       colors: {
         // primary: "var(--primary)",
         // secondary: "var(--secondary)",
+        // Public site theme tokens (see globals.css).
+        paper: "var(--paper)",
+        surface: "var(--surface)",
+        tint: "var(--tint)",
+        ink: "var(--ink)",
+        soft: "var(--soft)",
+        line: "var(--line)",
+        brand: {
+          DEFAULT: "var(--brand)",
+          ink: "var(--brand-ink)",
+          text: "var(--brand-text)",
+        },
+        // Same values as the --light / --dark tokens in globals.css.
         light: "#fefefe",
-        dark: "#010101",
+        dark: "#101010",
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",

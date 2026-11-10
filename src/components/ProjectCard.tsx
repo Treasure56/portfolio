@@ -1,8 +1,6 @@
 import { supabaseImage } from "@/utils/supabase";
-import { Link2 } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import { FaLink } from "react-icons/fa6";
 import { LuArrowUpRight, LuLink } from "react-icons/lu";
 
 export type ProjectCardProps = {
@@ -11,6 +9,11 @@ export type ProjectCardProps = {
   content: string;
   live?: string | null;
   github?: string | null;
+  category?: string | null;
+  tech?: string | null;
+  video?: string | null;
+  role?: string | null;
+  featured?: boolean | null;
 };
 export default function ProjectCard({
   img,

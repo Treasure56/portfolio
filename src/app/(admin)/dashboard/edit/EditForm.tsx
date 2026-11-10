@@ -5,6 +5,7 @@ import { useFormState } from "react-dom";
 import FormButton from "@/components/FormButton";
 import { ProjectCardProps } from "@/components/ProjectCard";
 import { editProject } from "@/actions/editProjects";
+import ProjectExtraFields from "../ProjectExtraFields";
 
 export default function EditForm({
   content,
@@ -12,6 +13,11 @@ export default function EditForm({
   title,
   github,
   live,
+  category,
+  tech,
+  video,
+  role,
+  featured,
   _id,
 }: ProjectCardProps & {
   _id: string;
@@ -105,6 +111,14 @@ export default function EditForm({
             className="form-input"
           />
         </div>
+
+        <ProjectExtraFields
+          category={category}
+          tech={tech}
+          video={video}
+          role={role}
+          featured={featured}
+        />
 
         <input type="hidden" value={img} name="old_img" />
         <input type="hidden" value={_id} name="_id" />

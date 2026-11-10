@@ -7,6 +7,7 @@ import { randomUUID } from "crypto";
 import { revalidatePath } from "next/cache";
 import { redirect } from "next/navigation";
 import { z } from "zod";
+import { readExtraFields } from "@/app/(admin)/dashboard/ProjectExtraFields";
 
 const createProjectSchema = z.object({
   title: z.string().min(5, "title is too short"),
@@ -56,6 +57,7 @@ export async function createProject(
       title,
       live,
       github,
+      ...readExtraFields(formData),
     });
 
     const saved = await newProject.save();

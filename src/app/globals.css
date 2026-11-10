@@ -2,15 +2,36 @@
 @tailwind components;
 @tailwind utilities;
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
 :root {
+  /* Brand tokens (used by the dashboard and buttons). */
   --primary: #970846;
   --secondary: #51a8ff;
   --dark: #101010;
   --light: #fefefe;
+
+  /* Public site theme. */
+  --paper: #fbf5f1;
+  --surface: #f3e7e2;
+  --tint: #f8c9da;
+  --ink: #1e1519;
+  --soft: #5f5257;
+  --line: #e0d0cb;
+  --dot: #e7d8d3;
+  --brand: #970846;
+  --brand-ink: #fefefe;
+  --brand-text: #970846;
+}
+
+/* Only pages that render the public site get the themed page background. */
+body:has(.site) {
+  background: var(--paper);
+}
+
+/* Dotted "canvas" background behind the whole public site. */
+.site {
+  background-color: var(--paper);
+  background-image: radial-gradient(var(--dot) 1.2px, transparent 1.2px);
+  background-size: 22px 22px;
 }
 
 @layer utilities {
@@ -28,6 +49,114 @@
   }
   .form-input {
     @apply border border-dark rounded-md w-full p-4;
+  }
+
+  /* ---------- Public site ---------- */
+  .site-container {
+    @apply mx-auto w-full max-w-[1280px] px-5 sm:px-8 lg:px-12;
+  }
+  .display {
+    @apply font-display leading-[1.08] tracking-[-0.015em];
+  }
+  .h-section {
+    @apply font-display text-[clamp(2.25rem,4.6vw,3.6rem)] leading-[1.08] tracking-[-0.015em];
+  }
+  /* Handwritten side notes. */
+  .note {
+    @apply font-note text-[1.35rem] leading-tight text-brand-text;
+  }
+
+  /* Outlined pieces with a hard offset shadow, like stickers on a desk. */
+  .pop {
+    border: 1.5px solid var(--ink);
+    box-shadow: 5px 5px 0 var(--ink);
+  }
+  .pop-sm {
+    border: 1.5px solid var(--ink);
+    box-shadow: 3px 3px 0 var(--ink);
+  }
+  .sticker {
+    @apply inline-flex items-center gap-2 rounded-full bg-paper px-3.5 py-1.5 text-sm font-medium text-ink;
+    border: 1.5px solid var(--ink);
+    box-shadow: 2px 2px 0 var(--ink);
+  }
+
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-full px-6 py-3 text-[0.95rem] font-semibold;
+    border: 1.5px solid var(--ink);
+    box-shadow: 3px 3px 0 var(--ink);
+    transition: transform 0.15s ease, box-shadow 0.15s ease, background-color 0.15s ease;
+  }
+  .btn:hover {
+    transform: translate(-1px, -1px);
+    box-shadow: 4px 4px 0 var(--ink);
+  }
+  .btn:active {
+    transform: translate(3px, 3px);
+    box-shadow: 0 0 0 var(--ink);
+  }
+  .btn-brand {
+    @apply btn bg-brand text-brand-ink;
+  }
+  .btn-outline {
+    @apply btn bg-paper text-ink;
+  }
+}
+
+/* Highlighter swipe behind a word. */
+.mark {
+  background-image: linear-gradient(transparent 56%, var(--tint) 56%, var(--tint) 92%, transparent 92%);
+  padding: 0 0.12em;
+  margin: 0 -0.12em;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+}
+
+/* Scrolling company ribbon: pauses on hover, static for reduced motion. */
+@keyframes marquee-scroll {
+  to {
+    transform: translateX(-50%);
+  }
+}
+.marquee-track {
+  animation: marquee-scroll 55s linear infinite;
+  will-change: transform;
+}
+.marquee:hover .marquee-track {
+  animation-play-state: paused;
+}
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track {
+    animation: none;
+    width: 100%;
+    padding: 0 2.5rem;
+  }
+  .marquee-group {
+    flex-wrap: wrap;
+    row-gap: 1rem;
+  }
+  .marquee-group[aria-hidden="true"],
+  .marquee-group li[aria-hidden="true"] {
+    display: none;
+  }
+}
+
+.site :focus-visible {
+  outline: 2px solid var(--brand);
+  outline-offset: 3px;
+}
+
+.site ::selection {
+  background: var(--brand);
+  color: var(--brand-ink);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .btn,
+  .btn:hover,
+  .btn:active {
+    transition: none;
+    transform: none;
   }
 }
 
@@ -61,10 +190,8 @@
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
 
-    --primary: 222.2 47.4% 11.2%;
     --primary-foreground: 210 40% 98%;
 
-    --secondary: 210 40% 96.1%;
     --secondary-foreground: 222.2 47.4% 11.2%;
 
     --muted: 210 40% 96.1%;
@@ -81,36 +208,6 @@
     --ring: 222.2 84% 4.9%;
 
     --radius: 0.5rem;
-  }
-
-  .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
-
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
-
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
-
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
-
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
-
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
-
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
   }
 }
 
